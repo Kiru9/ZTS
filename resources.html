@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="snowflake-source" content="cortex-agent-authored"><meta name="description" content="Zero to Snowflake 한국어 핸즈온 가이드: 마무리 및 참고 자료"><title>마무리 및 참고 자료 | Zero to Snowflake 한국어</title>
+<script type="application/json" id="snowflake-report-metadata">{"generated": "2026-09-21", "intent": "Zero to Snowflake Korean hands-on translation", "dataSources": [{"type": "url", "url": "https://www.snowflake.com/en/developers/guides/zero-to-snowflake/", "snapshot": "content/source/article.html"}], "sections": [{"id": "conclusion-and-resources", "title": "마무리 및 참고 자료", "producerNotes": "Full Korean translation. Executable SQL unchanged; SQL comments translated. Original screenshots embedded. No SQL was executed."}]}</script>
+<style>:root{color-scheme:light dark;--bg:#fff;--surface:#f3f7fa;--ink:#172b42;--muted:#526578;--line:#dbe5ec;--accent:#087fab;--nav:#eef7fb;--code:#11283d;--code-ink:#eef7ff;font-family:'Noto Sans KR',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+*{box-sizing:border-box}html{scroll-padding-top:90px;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.85}a{color:var(--accent);text-underline-offset:4px;overflow-wrap:anywhere}button,a,input,summary{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid #e9a23b;outline-offset:4px}.skip{position:fixed;left:16px;top:-80px;padding:10px;background:var(--bg);z-index:20}.skip:focus{top:10px}.topbar{position:sticky;top:0;z-index:5;height:68px;padding:0 30px;border-bottom:1px solid var(--line);background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{color:var(--ink);text-decoration:none;font-size:17px;font-weight:750;display:flex;align-items:center;gap:12px}.brand svg{width:26px;height:26px;stroke:#29b5e8;fill:none;stroke-width:2}.top-actions{display:flex;align-items:center;gap:18px;font-size:13px}.language{font-size:11px;letter-spacing:.12em;color:var(--muted)}.icon-button{border:1px solid var(--line);background:var(--bg);color:var(--ink);width:36px;height:36px;padding:7px;display:inline-flex;align-items:center;justify-content:center}.icon-button svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7}.layout{max-width:1500px;margin:auto;display:grid;grid-template-columns:268px minmax(0,1fr)}.sidebar{position:sticky;top:68px;align-self:start;max-height:calc(100dvh - 68px);overflow-y:auto;padding:28px 20px;border-right:1px solid var(--line)}.sidebar-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 12px 14px}.chapters{list-style:none;padding:0;margin:0}.chapters li{margin:3px 0}.chapters a{display:grid;grid-template-columns:22px 1fr;gap:6px;text-decoration:none;color:var(--muted);font-size:13px;line-height:1.55;padding:10px 12px;border-left:3px solid transparent}.chapters a[aria-current=page]{background:var(--nav);border-left-color:var(--accent);color:var(--ink);font-weight:700}.chapters a:hover{color:var(--accent);background:var(--surface)}.chapters span{font-size:11px;font-variant-numeric:tabular-nums;opacity:.7}.local-nav{margin:22px 0 0;padding:18px 12px 0;border-top:1px solid var(--line)}.local-nav summary{font-size:13px;font-weight:700;cursor:pointer}.local-nav ol{list-style:none;padding:8px 0;margin:0}.local-nav a{font-size:12px;line-height:1.55;display:block;margin:10px 0;text-decoration:none;color:var(--muted)}main{min-width:0;padding:48px clamp(22px,5vw,78px) 32px;max-width:1130px}.eyebrow{font-size:12px;letter-spacing:.15em;color:var(--accent);font-weight:750;margin:0 0 12px}.page-title{font-size:clamp(30px,4vw,46px);line-height:1.25;letter-spacing:-.035em;margin:0 0 18px;word-break:keep-all}.page-meta{font-size:12px;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:30px}.notice{border-left:3px solid var(--accent);padding:12px 18px;background:var(--nav);font-size:13px;line-height:1.8;margin:24px 0}.notice summary{cursor:pointer;font-weight:700}.notice p{margin:8px 0}.notice a{font-size:inherit}article h2,article h3,article h4{line-height:1.45;word-break:keep-all;scroll-margin-top:90px}article h2{font-size:28px;margin:50px 0 20px}article h3{font-size:23px;margin:48px 0 16px;border-top:1px solid var(--line);padding-top:28px}article h4{font-size:18px;margin:32px 0 12px}article h3 strong,article h4 strong{font-weight:700}article p{margin:14px 0}article li{padding-left:3px;margin:7px 0}article ul,article ol{padding-left:25px}article strong{font-weight:680}article code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86em;overflow-wrap:anywhere;background:var(--surface);padding:2px 5px;border-radius:3px}article pre{white-space:pre;overflow:auto;max-width:100%;margin:0;padding:18px 20px;line-height:1.65;tab-size:4}article pre code{padding:0;background:none;color:inherit;font-size:13px;overflow-wrap:normal}.code-frame{margin:20px 0 26px;background:var(--code);color:var(--code-ink);border:1px solid #2b475b;min-width:0}.code-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 12px;border-bottom:1px solid #355267;font-size:10px;letter-spacing:.07em;color:#bed3e3}.copy-button{background:none;border:0;color:inherit;padding:5px;display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:0}.copy-button svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6}.original{margin:12px 0 24px;font-size:13px;color:var(--muted)}.original summary{cursor:pointer}.original pre{white-space:pre-wrap}.prompt-ko pre{white-space:pre-wrap}.figure{margin:26px 0 34px}.figure img{max-width:100%;height:auto;display:block;border:1px solid var(--line);background:white}.image-button{display:block;border:0;background:none;padding:0;width:100%;text-align:left;cursor:zoom-in}.figure figcaption{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.6}.table-wrap{overflow:auto;max-width:100%;margin:24px 0}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid var(--line);padding:10px 14px;text-align:left}th{background:var(--surface)}.anchor-link{font-size:14px;text-decoration:none;margin-left:9px;opacity:0;font-weight:400}h3:hover .anchor-link,h4:hover .anchor-link,.anchor-link:focus{opacity:1}.chapter-footer{margin-top:52px;border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:24px;font-size:14px}.chapter-footer a{max-width:48%;text-decoration:none}.chapter-footer span{display:block;font-size:11px;color:var(--muted)}.page-footer{font-size:11px;line-height:1.7;color:var(--muted);margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}.image-dialog{width:min(96vw,1500px);max-height:94dvh;padding:16px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}.image-dialog::backdrop{background:rgba(4,18,30,.84)}.dialog-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}.dialog-top p{font-size:13px;margin:0}.image-dialog img{display:block;max-width:100%;height:auto;margin:auto}.status{position:fixed;bottom:18px;right:18px;background:var(--ink);color:var(--bg);padding:10px 16px;font-size:13px;z-index:30;max-width:calc(100vw - 36px)}.status:empty{display:none}.mobile-menu{display:none}.progress{position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:transparent}.progress span{display:block;height:100%;background:#29b5e8;width:0}.no-script{font-size:13px;color:var(--muted)}.inline-translation{font-size:13px;border-left:2px solid var(--line);padding:8px 14px;margin:14px 0}
+@media(prefers-color-scheme:dark){:root{--bg:#101c28;--surface:#192b3c;--ink:#e4edf5;--muted:#a6bacd;--line:#304354;--accent:#62cdf4;--nav:#152e41;--code:#0b1722;--code-ink:#dfedf8}.figure img{opacity:.94}}
+@media(max-width:850px){.layout{grid-template-columns:220px minmax(0,1fr)}.sidebar{padding:24px 12px}main{padding:32px 24px}.topbar{padding:0 20px}}
+@media(max-width:650px){.topbar{height:60px;padding:0 16px}.brand{font-size:14px;gap:8px}.brand svg{width:22px}.language{display:none}.top-actions{gap:10px}.top-actions>a{font-size:11px}.layout{display:block}.sidebar{position:static;max-height:none;border-right:0;padding:14px 16px;border-bottom:1px solid var(--line)}.sidebar-title{display:none}.mobile-menu{display:flex;width:100%;align-items:center;justify-content:space-between;border:0;background:none;color:var(--ink);padding:0;font-weight:650;font-size:13px}.js .sidebar-content{display:none}.js .sidebar-content.open{display:block;padding-top:12px}.chapters a{font-size:13px}.local-nav{margin-top:10px}main{padding:30px 20px}.page-title{font-size:31px}.page-meta{gap:8px 18px}article h3{font-size:21px}article h4{font-size:17px}article pre{padding:15px}body{font-size:15px}.figure{margin:22px 0}.chapter-footer{font-size:13px;gap:14px}.image-dialog{padding:10px}.page-footer{font-size:11px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.topbar,.sidebar,.copy-button,.anchor-link,.chapter-footer,.status,.image-dialog{display:none!important}.layout{display:block}main{max-width:none;padding:0}body{background:white;color:#111;font-size:11pt}article h3,article h4{break-after:avoid}article pre{white-space:pre-wrap;overflow:visible}.code-frame{background:#f5f5f5;color:#111;border-color:#bbb;break-inside:avoid}.code-header{color:#333;border-color:#bbb}.figure{break-inside:avoid}.notice,.original{background:none}.page-meta,.page-footer{color:#444}a{color:#174b69}.figure img{max-height:220mm;object-fit:contain}.page-title{font-size:25pt}}</style></head>
+<body><a class="skip" href="#main">본문으로 이동</a><header class="topbar"><a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2v28M4 9l24 14M4 23L28 9M11 5l5 4 5-4M11 27l5-4 5 4M4 15l6-2-1-6M28 17l-6 2 1 6M4 17l6 2-1 6M28 15l-6-2 1-6"/></svg><span>Zero to Snowflake</span></a><div class="top-actions"><span class="language">한국어 · KO</span><a href="https://www.snowflake.com/en/developers/guides/zero-to-snowflake/">영어 원문 ↗</a><button type="button" class="icon-button" data-print aria-label="현재 장 인쇄"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8V3h12v5M6 17H3V8h18v9h-3M6 14h12v7H6z"/></svg></button></div><div class="progress" aria-hidden="true"><span></span></div></header>
+<div class="layout"><aside class="sidebar"><p class="sidebar-title">Hands-on guide</p><button type="button" class="mobile-menu" aria-expanded="false" aria-controls="sidebar-content">목차 <span aria-hidden="true">☰</span></button><div class="sidebar-content" id="sidebar-content"><nav aria-label="전체 목차"><ol class="chapters"><li><a href="index.html"><span>01</span>개요</a></li><li><a href="setup.html"><span>02</span>설정</a></li><li><a href="getting-started.html"><span>03</span>Snowflake 시작하기</a></li><li><a href="data-pipeline.html"><span>04</span>간단한 데이터 파이프라인</a></li><li><a href="cortex-ai.html"><span>05</span>Snowflake Cortex AI</a></li><li><a href="governance.html"><span>06</span>Horizon을 활용한 거버넌스</a></li><li><a href="apps-collaboration.html"><span>07</span>앱 &amp; 협업</a></li><li><a href="resources.html" aria-current="page"><span>08</span>마무리 및 참고 자료</a></li></ol></nav><details class="local-nav" open><summary>이 장의 내용</summary><nav aria-label="현재 장 목차"><ol></ol></nav></details></div></aside>
+<main id="main"><p class="eyebrow">SNOWFLAKE QUICKSTART · 08 / 08</p><h1 class="page-title" id="conclusion-and-resources">마무리 및 참고 자료</h1><div class="page-meta"><span>한국어 번역본</span><span>원문 기준 2026.09.21</span><span>Tasty Bytes</span></div><aside class="notice" aria-label="교육 자료 이용 안내" data-distribution-notice><strong>교육 참석자용 · 외부 공유 및 재배포 금지</strong></aside><noscript><p class="no-script">본문과 목차는 JavaScript 없이도 읽을 수 있습니다. 코드 복사와 이미지 확대는 JavaScript가 필요합니다.</p></noscript><article>
+<h4 data-translation-id="t0730" id="step-t0730">개요<a aria-label="개요 링크" class="anchor-link" href="#step-t0730">#</a></h4>
+<p data-translation-id="t0731">축하합니다! Tasty Bytes - Zero to Snowflake의 전체 과정을 성공적으로 완료했습니다.</p>
+<p data-translation-id="t0732">지금까지 웨어하우스를 생성하고 구성했으며, 데이터를 복제하고 변환하고, Time Travel로 삭제된 테이블을 복구하고, 반정형 데이터를 위한 자동화된 데이터 파이프라인을 구축했습니다. 또한 간단한 AISQL 함수로 분석을 생성하고 Snowflake Copilot으로 워크플로우를 가속화하여 AI를 활용한 인사이트를 얻었습니다. 더 나아가 역할과 정책으로 견고한 거버넌스 프레임워크를 구현하고 Snowflake Marketplace의 실시간 데이터 세트로 자체 데이터를 원활하게 보강했습니다.</p>
+<p data-translation-id="t0733">이 Quickstart를 다시 실행하려면 SQL 파일 하단에 있는 <code>RESET</code> 스크립트 전체를 실행하세요.</p>
+<h4 data-translation-id="t0734" id="step-t0734">학습한 내용<a aria-label="학습한 내용 링크" class="anchor-link" href="#step-t0734">#</a></h4>
+<ul>
+<li data-translation-id="t0735"><strong>웨어하우징 및 성능:</strong> 가상 웨어하우스를 생성하고 관리하며 확장하고, Snowflake의 결과 캐시를 활용하는 방법.</li>
+<li data-translation-id="t0736"><strong>데이터 변환:</strong> 안전한 개발을 위해 Zero-Copy Cloning을 사용하고, 데이터를 변환하고, Time Travel과 <code>UNDROP</code>을 사용하여 오류로부터 즉시 복구하는 방법.</li>
+<li data-translation-id="t0737"><strong>데이터 파이프라인:</strong> 외부 Stage에서 데이터를 수집하고, 반정형 <code>VARIANT</code> 데이터를 처리하고, Dynamic Table로 자동화된 ELT 파이프라인을 구축하는 방법.</li>
+<li data-translation-id="t0738"><strong>Snowflake Cortex AI</strong> Snowflake Cortex AI를 활용하여 고객 분석 플랫폼을 구축하는 방법.</li>
+<li data-translation-id="t0739"><strong>데이터 거버넌스:</strong> 역할 기반 액세스 제어, 자동 PII 분류, 태그 기반 데이터 마스킹 및 로우 액세스 정책을 사용하여 보안 프레임워크를 구현하는 방법.</li>
+<li data-translation-id="t0740"><strong>데이터 협업:</strong> Snowflake Marketplace에서 실시간 타사 데이터 세트를 검색하고 확보한 다음, 자체 데이터와 원활하게 조인하여 새로운 인사이트를 얻는 방법.</li>
+</ul>
+<h4 data-translation-id="t0741" id="step-t0741">참고 자료<a aria-label="참고 자료 링크" class="anchor-link" href="#step-t0741">#</a></h4>
+<ul>
+<li data-translation-id="t0742"><a href="https://docs.snowflake.com/en/user-guide/warehouses-overview">가상 웨어하우스 &amp; 설정</a></li>
+<li data-translation-id="t0743"><a href="https://docs.snowflake.com/en/user-guide/resource-monitors">Resource Monitor</a></li>
+<li data-translation-id="t0744"><a href="https://docs.snowflake.com/en/user-guide/budgets">Budget</a></li>
+<li data-translation-id="t0745"><a href="https://docs.snowflake.com/en/user-guide/ui-snowsight-universal-search">Universal Search</a></li>
+<li data-translation-id="t0746"><a href="https://docs.snowflake.com/en/sql-reference/sql/copy-into-table">외부 Stage에서 데이터 수집</a></li>
+<li data-translation-id="t0747"><a href="https://docs.snowflake.com/en/sql-reference/data-types-semistructured">반정형 데이터</a></li>
+<li data-translation-id="t0748"><a href="https://docs.snowflake.com/en/user-guide/dynamic-tables-about">Dynamic Table</a></li>
+<li data-translation-id="t0749"><a href="https://docs.snowflake.com/en/user-guide/security-access-control-overview">역할 &amp; 액세스 제어</a></li>
+<li data-translation-id="t0750"><a href="https://docs.snowflake.com/en/user-guide/classify-auto">태그 기반 분류</a></li>
+<li data-translation-id="t0751"><a href="https://docs.snowflake.com/en/user-guide/security-column-intro">마스킹 정책을 사용한 컬럼 수준 보안</a></li>
+<li data-translation-id="t0752"><a href="https://docs.snowflake.com/en/user-guide/security-row-intro">로우 액세스 정책을 사용한 로우 수준 보안</a></li>
+<li data-translation-id="t0753"><a href="https://docs.snowflake.com/en/user-guide/data-quality-intro">Data Metric Function</a></li>
+<li data-translation-id="t0754"><a href="https://docs.snowflake.com/en/user-guide/trust-center/overview">Trust Center</a></li>
+<li data-translation-id="t0755"><a href="https://docs.snowflake.com/en/user-guide/data-sharing-intro">Data Sharing</a></li>
+<li data-translation-id="t0756"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-playground">Snowflake Cortex Playground</a></li>
+<li data-translation-id="t0757"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/aisql">Snowflake Cortex의 AI SQL 함수</a></li>
+</ul>
+
+<ul>
+<li data-translation-id="t0758"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-overview">Snowflake Cortex Search 개요</a></li>
+<li data-translation-id="t0759"><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst">Snowflake Cortex Analyst</a></li>
+</ul></article><nav class="chapter-footer" aria-label="이전 다음 장"><a href="apps-collaboration.html"><span>이전</span>← 앱 &amp; 협업</a><a href="index.html"><span>처음으로</span>개요 →</a></nav><footer class="page-footer">교육용 한국어 참고 번역 · 공식 웹사이트가 아닙니다 · <a href="https://www.snowflake.com/en/developers/guides/zero-to-snowflake/">Snowflake 원문</a></footer></main></div>
+<dialog class="image-dialog" aria-label="원본 이미지 확대"><div class="dialog-top"><p></p><button type="button" class="icon-button" aria-label="확대 이미지 닫기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19"/></svg></button></div><img alt=""></dialog><div class="status" role="status" aria-live="polite"></div>
+<script>document.documentElement.classList.add('js');
+const copyIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V4H4v12h4"/></svg>';
+const statusRegion = document.querySelector('[role="status"]');
+let statusTimer;
+function notify(message) {
+  clearTimeout(statusTimer);
+  statusRegion.textContent = message;
+  statusTimer = setTimeout(() => { statusRegion.textContent = ''; }, 5000);
+}
+document.querySelectorAll('.code-frame').forEach(frame => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'copy-button';
+  button.innerHTML = copyIcon + '<span>복사</span>';
+  button.setAttribute('aria-label', '이 블록을 클립보드에 복사');
+  frame.querySelector('.code-header').append(button);
+  button.addEventListener('click', async () => {
+    const code = frame.querySelector('code');
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(code.textContent);
+      notify('클립보드에 복사했습니다.');
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      notify('텍스트를 선택했습니다. Ctrl+C 또는 ⌘C로 복사하세요.');
+    }
+  });
+});
+const menu = document.querySelector('.mobile-menu');
+const menuContent = document.querySelector('.sidebar-content');
+menu.addEventListener('click', () => {
+  const open = menuContent.classList.toggle('open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+document.querySelector('[data-print]').addEventListener('click', () => window.print());
+const dialog = document.querySelector('.image-dialog');
+const dialogImage = dialog.querySelector('img');
+const dialogCaption = dialog.querySelector('p');
+let imageTrigger;
+document.querySelectorAll('.figure img').forEach(image => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'image-button';
+  button.setAttribute('aria-label', image.alt + ' 확대');
+  image.before(button);
+  button.append(image);
+  button.addEventListener('click', () => {
+    imageTrigger = button;
+    dialogImage.src = image.src;
+    dialogImage.alt = image.alt;
+    dialogCaption.textContent = image.alt;
+    dialog.showModal();
+  });
+});
+dialog.querySelector('button').addEventListener('click', () => dialog.close());
+dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+dialog.addEventListener('close', () => {
+  dialogImage.removeAttribute('src');
+  imageTrigger?.focus();
+});
+const progress = document.querySelector('.progress span');
+let scrollPending = false;
+function updateProgress() {
+  const remaining = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (remaining > 0 ? Math.min(100, window.scrollY / remaining * 100) : 100) + '%';
+  scrollPending = false;
+}
+window.addEventListener('scroll', () => {
+  if (!scrollPending) { scrollPending = true; requestAnimationFrame(updateProgress); }
+}, {passive:true});
+window.addEventListener('resize', updateProgress);
+window.addEventListener('load', updateProgress);
+updateProgress();</script></body></html>
